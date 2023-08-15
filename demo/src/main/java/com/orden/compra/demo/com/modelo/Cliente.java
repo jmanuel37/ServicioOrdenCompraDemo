@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "cliente")
-public class Cliente implements Serializable{
+public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +28,22 @@ public class Cliente implements Serializable{
         this.idCliente = idCliente;
     }
 
+    public String getNombreCliente() {
+        return nombreCliente;
+    }
+
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
+    }
+
+    public String getDescripcionCliente() {
+        return descripcionCliente;
+    }
+
+    public void setDescripcionCliente(String descripcionCliente) {
+        this.descripcionCliente = descripcionCliente;
+    }
+
     public Cliente() {
     }
 
@@ -36,5 +52,6 @@ public class Cliente implements Serializable{
         this.nombreCliente = nombreCliente;
         this.descripcionCliente = descripcionCliente;
     }
+
 
 }
